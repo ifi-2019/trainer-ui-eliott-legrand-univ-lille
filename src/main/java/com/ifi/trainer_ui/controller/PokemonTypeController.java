@@ -18,7 +18,7 @@ public class PokemonTypeController {
     public ModelAndView pokedex(){
         // TODO
         var modelAndView = new ModelAndView("pokedex");
-        modelAndView.addObject("pokedex",pokemonTypeService.listPokemonTypes());
+        modelAndView.addObject("pokemonTypes",pokemonTypeService.listPokemonTypes());
         return modelAndView;
     }
 
