@@ -22,7 +22,7 @@ class PokemonTypeControllerTest {
     void pokemons_shouldReturnAModelAndView() {
         var pokemonTypeService = mock(PokemonTypeService.class);
 
-        when(pokemonTypeService.listPokemonsTypes()).thenReturn(List.of(new PokemonType(), new PokemonType()));
+        when(pokemonTypeService.listPokemonTypes()).thenReturn(List.of(new PokemonType(), new PokemonType()));
 
         var pokemonTypeController = new PokemonTypeController();
         pokemonTypeController.setPokemonTypeService(pokemonTypeService);
@@ -31,7 +31,7 @@ class PokemonTypeControllerTest {
         assertEquals("pokedex", modelAndView.getViewName());
         var pokemons = (List<PokemonType>)modelAndView.getModel().get("pokemonTypes");
         assertEquals(2, pokemons.size());
-        verify(pokemonTypeService).listPokemonsTypes();
+        verify(pokemonTypeService).listPokemonTypes();
     }
 
     @Test
