@@ -16,7 +16,6 @@ public class PokemonTypeController {
 
     @GetMapping("/pokedex")
     public ModelAndView pokedex(){
-        // TODO
         var modelAndView = new ModelAndView("pokedex");
         modelAndView.addObject("pokemonTypes",pokemonTypeService.listPokemonTypes());
         return modelAndView;
